@@ -126,7 +126,7 @@ class MIS:
         result = str(label[result_index])                       
         return result
     def __getFeature(self, img):
-        nR = 6;
+        nR = 5;
         nC = 4;
         (r, c) = img.shape
         deltaR = r/nR
