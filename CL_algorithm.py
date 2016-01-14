@@ -128,7 +128,7 @@ class MIS:
     def __getFeature(self, img):
         nR = 6;
         nC = 4;
-        (r, c) = img.shape()
+        (r, c) = img.shape
         deltaR = r/nR
         deltaC = c/nC
         hist = np.zeros((nR, nC))
@@ -137,7 +137,8 @@ class MIS:
                 block = img[i*deltaR:(i+1)*deltaR, j*deltaC:(j+1)*deltaC]
                 hist[i,j] = block.sum()
         feat = hist.reshape(nR*nC)
-        feat = float(feat)/feat.sum()                
+        feat = feat/(float(feat.sum())+1)  
+        return feat              
         
         
     def get_narrowest(self, im_array):

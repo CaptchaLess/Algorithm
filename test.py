@@ -112,8 +112,12 @@ if __name__=="__main__":
 #    test = [im,im,im,im]
     img_test_mis = Image.open('test_mis.jpg')
     mis = MIS()
-    test = mis.split_codes(img_test_mis)
-    print mis.makePrediction_mis(test)
+    
+    a = np.zeros((30,20))
+    test = [a,a,a,a]    
+    
+#    test = mis.split_codes(img_test_mis)
+    print mis.makePrediction_mis_test(test)
     
 #    getTemplate_mis()
     
