@@ -108,10 +108,11 @@ if __name__=="__main__":
 #    checkcode = makePrediction_yjs(img_test)
     print(checkcode)
     
-    im = np.zeros((20,20))>1
-    test = [im,im,im,im]
-    
+#    im = np.zeros((20,20))>1
+#    test = [im,im,im,im]
+    img_test_mis = Image.open('test_mis.jpg')
     mis = MIS()
+    test = mis.split_codes(img_test_mis)
     print mis.makePrediction_mis(test)
     
 #    getTemplate_mis()
